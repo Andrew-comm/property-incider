@@ -114,9 +114,7 @@ const ActivitiesCarousel = () => {
                   <h5>{service.title}</h5>
                   <p>{service.description}</p>
                   {/* Updated Link usage without <a> tag */}
-                  <Link href={service.link} className={styles.carouselLink}>
-                    Learn More
-                  </Link>
+                  
                 </div>
               </div>
             ))}
