@@ -65,6 +65,7 @@ const ActivitiesCarousel = () => {
       <div className="container">
         <h2 className={`text-center mb-4 ${styles.activitiesTitle}`}>Our Activities</h2>
         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+          {/* Carousel Indicators */}
           <div className="carousel-indicators">
             {services.map((_, index) => (
               <button
@@ -73,18 +74,23 @@ const ActivitiesCarousel = () => {
                 data-bs-target="#carouselExample"
                 data-bs-slide-to={index}
                 className={index === 0 ? 'active' : ''}
-                aria-current={index === 0 ? 'true' : undefined}
+                aria-current={index === 0}
                 aria-label={`Slide ${index + 1}`}
               ></button>
             ))}
           </div>
+
+          {/* Carousel Items */}
           <div className="carousel-inner">
             {services.map((service, index) => (
               <div
                 key={index}
                 className={`carousel-item ${index === 0 ? 'active' : ''}`}
               >
-                <div className="d-block w-100 position-relative" style={{ height: '600px' }}>
+                <div
+                  className="d-block w-100 position-relative"
+                  style={{ height: '600px' }}
+                >
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -99,6 +105,8 @@ const ActivitiesCarousel = () => {
               </div>
             ))}
           </div>
+
+          {/* Carousel Controls */}
           <button
             className="carousel-control-prev"
             type="button"

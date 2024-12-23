@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image'; // Using next/image for image optimization
 import styles from '../styles/Testimonials.module.css';
 
 const Testimonials = () => {
@@ -8,25 +9,29 @@ const Testimonials = () => {
     {
       name: 'John Oluoch',
       role: 'Client',
-      feedback: 'Amazing service! They helped us find the perfect rental property with ease. Highly recommend!',
+      feedback:
+        'Amazing service! They helped us find the perfect rental property with ease. Highly recommend!',
       image: '/images/testimonial-1.png',
     },
     {
       name: 'Jane Kirui',
       role: 'Tenant',
-      feedback: 'I’ve been renting for years, and this is the best management service I’ve experienced.',
+      feedback:
+        'I’ve been renting for years, and this is the best management service I’ve experienced.',
       image: '/images/testimonial-2.png',
     },
     {
       name: 'David Kimani',
       role: 'Landlord',
-      feedback: 'The team provided excellent support for my properties. They manage everything efficiently.',
+      feedback:
+        'The team provided excellent support for my properties. They manage everything efficiently.',
       image: '/images/testimonial-3.png',
     },
     {
       name: 'Emma Kevogo',
       role: 'Property Owner',
-      feedback: 'A wonderful team to work with. They truly care about both the tenants and the property owners.',
+      feedback:
+        'A wonderful team to work with. They truly care about both the tenants and the property owners.',
       image: '/images/testimonial-4.png',
     },
   ];
@@ -49,22 +54,36 @@ const Testimonials = () => {
         <h2 className="text-center mb-4">What Our Clients Say</h2>
         <div className="carousel">
           <div className={`${styles.testimonialCard} card shadow-sm`}>
-            <img
+            <Image
               src={testimonials[currentIndex].image}
               alt={testimonials[currentIndex].name}
               className={`${styles.testimonialImage} rounded-circle mx-auto d-block`}
+              width={100}
+              height={100} // Add appropriate width/height
             />
             <div className="card-body">
-              <p className="testimonial-feedback">"{testimonials[currentIndex].feedback}"</p>
-              <h4 className="testimonial-name">{testimonials[currentIndex].name}</h4>
-              <p className="testimonial-role">{testimonials[currentIndex].role}</p>
+              <p className={styles.testimonialFeedback}>
+                &quot;{testimonials[currentIndex].feedback}&quot;
+              </p>
+              <h4 className={styles.testimonialName}>
+                {testimonials[currentIndex].name}
+              </h4>
+              <p className={styles.testimonialRole}>
+                {testimonials[currentIndex].role}
+              </p>
             </div>
           </div>
           <div className="carousel-buttons">
-            <button className={`${styles.carouselBtn} prev`} onClick={prevTestimonial}>
+            <button
+              className={`${styles.carouselBtn} ${styles.prev}`}
+              onClick={prevTestimonial}
+            >
               &#10094;
             </button>
-            <button className={`${styles.carouselBtn} next`} onClick={nextTestimonial}>
+            <button
+              className={`${styles.carouselBtn} ${styles.next}`}
+              onClick={nextTestimonial}
+            >
               &#10095;
             </button>
           </div>

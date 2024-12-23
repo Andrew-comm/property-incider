@@ -1,24 +1,19 @@
 import styles from '../styles/Footer.module.css';
 import { FaFacebook, FaTwitter, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import Image from 'next/image'; // For WhatsApp image
+import Image from 'next/image';
 
 const Footer = () => {
-  // State for showing back to top button
+  // State for showing the "Back to Top" button
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Show or hide the button when scrolling
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -28,9 +23,10 @@ const Footer = () => {
   };
 
   return (
-    <footer id='footer' className={`py-4 ${styles.footer}`}>
+    <footer id="footer" className={`py-4 ${styles.footer}`}>
       <div className="container">
         <div className="row text-center text-md-start">
+          {/* Contact Section */}
           <div className="col-md-4 mb-3">
             <h5>Contact Us</h5>
             <p>
@@ -66,6 +62,8 @@ const Footer = () => {
               </a>
             </p>
           </div>
+
+          {/* Location Section */}
           <div className="col-md-4 mb-3">
             <h5>Location</h5>
             <p>
@@ -73,6 +71,8 @@ const Footer = () => {
             </p>
             <p>P.O. Box: 508-20103 - Market Road</p>
           </div>
+
+          {/* About Us Section */}
           <div className="col-md-4 mb-3">
             <h5>About Us</h5>
             <p>
@@ -81,23 +81,23 @@ const Footer = () => {
             </p>
           </div>
         </div>
+
+        {/* Divider */}
         <hr className={styles.divider} />
-        <footer className="bg-dark text-light py-3">
+
+        {/* Footer Bottom Section */}
+        <div className="bg-dark text-light py-3">
           <div className="container">
             <p className="text-center">
-              &copy; {new Date().getFullYear()} Property Incider Commercial Agency Limited. All rights reserved
+              &copy; {new Date().getFullYear()} Property Incider Commercial Agency Limited. All rights reserved.
             </p>
           </div>
-        </footer>
-
+        </div>
       </div>
 
       {/* Back to Top Button */}
       {isVisible && (
-        <button
-          className={styles.backToTop}
-          onClick={scrollToTop}
-        >
+        <button className={styles.backToTop} onClick={scrollToTop}>
           ↑
         </button>
       )}
@@ -110,10 +110,10 @@ const Footer = () => {
         className={styles.whatsappButton}
       >
         <Image
-          src="/images/whatsapp-icon.png" // Ensure you have this image in the public directory
+          src="/images/whatsapp-icon.png"
           alt="Chat with us on WhatsApp"
-          width={50} // Reduced size
-          height={50} // Reduced size
+          width={50}
+          height={50}
         />
       </a>
     </footer>

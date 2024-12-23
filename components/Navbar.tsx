@@ -1,24 +1,27 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/Navbar.module.css';  // Import the CSS module
+import styles from '../styles/Navbar.module.css'; // Import CSS module
 
 const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
       <div className="container">
-        {/* Logo on the left side of the navbar */}
-        <Link className={`navbar-brand ${styles.navbarBrand}`} href="/">
-          <Image 
-            src="/images/logo.png" 
-            alt="Property Incider Logo" 
-            width={60} 
-            height={40} 
-            style={{ marginRight: '10px' }} 
-          />
-          Property Incider
+        {/* Logo */}
+        <Link href="/" passHref>
+          <a className={`navbar-brand ${styles.navbarBrand}`}>
+            <Image
+              src="/images/logo.png"
+              alt="Property Incider Logo"
+              width={60}
+              height={40}
+              className={styles.logo}
+              priority
+            />
+            Property Incider
+          </a>
         </Link>
 
-        {/* Navbar toggler for mobile view */}
+        {/* Mobile Navbar Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -31,23 +34,33 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar links */}
+        {/* Navbar Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" href="#">Home</Link>
+              <Link href="/" passHref>
+                <a className="nav-link" aria-current="page">Home</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#about">About</Link>
+              <Link href="#about" passHref>
+                <a className="nav-link">About</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#services">Services</Link>
+              <Link href="#services" passHref>
+                <a className="nav-link">Services</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#activities">Activities</Link>
+              <Link href="#activities" passHref>
+                <a className="nav-link">Activities</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#footer">Contact</Link>
+              <Link href="#footer" passHref>
+                <a className="nav-link">Contact</a>
+              </Link>
             </li>
           </ul>
         </div>

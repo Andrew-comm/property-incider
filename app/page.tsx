@@ -3,8 +3,7 @@ import '../styles/Navbar.module.css';
 import About from '../components/About'; // Import components
 import Services from '../components/Services'; // Import components
 import ActivitiesCarousel from '../components/ActivitiesCarousel'; // Import carousel component
-import PromoSection from '../components/PromoSection'; // Import Promotional Section
-import Testimonials from '../components/Testimonials'; // Import Testimonials Section
+// Removed PromoSection and Testimonials imports since they are not used
 
 export default function Home() {
   return (
@@ -21,9 +20,7 @@ export default function Home() {
 
         <section id="services" className="py-5 bg-light">
           <Services /> {/* Services section */}
-        </section>     
-
-        
+        </section>
       </main>
     </div>
   );

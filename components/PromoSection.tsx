@@ -1,6 +1,4 @@
-'use client';
-
-import styles from '../styles/Promo.module.css';
+import styles from '../styles/Promo.module.css'; // Import the CSS module
 
 const PromoSection = () => {
   return (
@@ -12,7 +10,7 @@ const PromoSection = () => {
               Ready to Find Your Perfect Property?
             </h2>
             <p className={`${styles.promoText} text-center text-white`}>
-              Whether you're buying, selling, or renting, we have the perfect property for you. Let us help you take the next step.
+              Whether you&apos;re buying, selling, or renting, we have the perfect property for you. Let us help you take the next step.
             </p>
             <div className="text-center">
               <a href="#services" className={`${styles.promoBtn} btn btn-primary`}>

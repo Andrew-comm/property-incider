@@ -1,9 +1,10 @@
-'use client';
+"use client"; // Add this directive
 
 import { useState } from 'react';
 import styles from '../styles/Services.module.css';
+import Image from 'next/image'; // Import next/image for optimized image loading
 
-const Services = () => { 
+const Services = () => {
   const [selectedService, setSelectedService] = useState<{
     title: string;
     description: string;
@@ -97,10 +98,12 @@ const Services = () => {
               <div className="col-md-6">
                 <div className={styles.imagesContainer}>
                   {selectedService.images.map((image, index) => (
-                    <img
+                    <Image
                       key={index}
                       src={image}
                       alt={`${selectedService.title} ${index + 1}`}
+                      width={500} // Specify width and height for better performance
+                      height={300}
                       className={styles.serviceImage}
                     />
                   ))}
