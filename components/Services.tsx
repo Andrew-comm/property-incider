@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import styles from '../styles/Services.module.css';
 import Image from 'next/image'; // Import next/image for optimized image loading
-import Link from 'next/link'; // Import next/link for client-side navigation
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState<{
