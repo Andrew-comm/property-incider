@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image'; // Using next/image for image optimization
+import Link from 'next/link'; // Importing Link for navigation
 import styles from '../styles/Testimonials.module.css';
 
 const Testimonials = () => {
@@ -51,7 +52,10 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className={`${styles.testimonialSection} py-5`}>
       <div className="container">
-        <h2 className="text-center mb-4">What Our Clients Say</h2>
+        {/* Example of using Next.js Link for navigation */}
+        <h2 className="text-center mb-4">
+          <Link href="/contact">What Our Clients Say</Link> {/* Link to Contact Page */}
+        </h2>
         <div className="carousel">
           <div className={`${styles.testimonialCard} card shadow-sm`}>
             <Image

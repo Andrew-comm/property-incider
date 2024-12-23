@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link'; // Import Link if you're using it
 import styles from '../styles/About.module.css';
 
 const About = () => {
@@ -27,6 +28,10 @@ const About = () => {
             <p className={styles.aboutText}>
               Our objective is to be a dependable partner in property management.
             </p>
+            {/* Updated Link usage without <a> tag */}
+            <Link href="#footer" className={styles.contactLink}>
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>

@@ -7,18 +7,16 @@ const Navbar = () => {
     <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
       <div className="container">
         {/* Logo */}
-        <Link href="/" passHref>
-          <a className={`navbar-brand ${styles.navbarBrand}`}>
-            <Image
-              src="/images/logo.png"
-              alt="Property Incider Logo"
-              width={60}
-              height={40}
-              className={styles.logo}
-              priority
-            />
-            Property Incider
-          </a>
+        <Link href="/" className={`navbar-brand ${styles.navbarBrand}`}>
+          <Image
+            src="/images/logo.png"
+            alt="Property Insider Logo"
+            width={60}
+            height={40}
+            className={styles.logo}
+            priority
+          />
+          Property Insider
         </Link>
 
         {/* Mobile Navbar Toggler */}
@@ -38,28 +36,28 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link href="/" passHref>
-                <a className="nav-link" aria-current="page">Home</a>
+              <Link href="/" className="nav-link" aria-current="page">
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#about" passHref>
-                <a className="nav-link">About</a>
+              <Link href="#about" className="nav-link">
+                About
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#services" passHref>
-                <a className="nav-link">Services</a>
+              <Link href="#services" className="nav-link">
+                Services
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#activities" passHref>
-                <a className="nav-link">Activities</a>
+              <Link href="#activities" className="nav-link">
+                Activities
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="#footer" passHref>
-                <a className="nav-link">Contact</a>
+              <Link href="#footer" className="nav-link">
+                Contact
               </Link>
             </li>
           </ul>

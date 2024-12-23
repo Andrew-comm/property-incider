@@ -1,4 +1,5 @@
 import styles from '../styles/Promo.module.css'; // Import the CSS module
+import Link from 'next/link'; // Import Link from Next.js
 
 const PromoSection = () => {
   return (
@@ -13,9 +14,10 @@ const PromoSection = () => {
               Whether you&apos;re buying, selling, or renting, we have the perfect property for you. Let us help you take the next step.
             </p>
             <div className="text-center">
-              <a href="#services" className={`${styles.promoBtn} btn btn-primary`}>
+              {/* Directly using the Link component without an <a> tag */}
+              <Link href="#services" className={`${styles.promoBtn} btn btn-primary`} aria-label="Get Started">
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
