@@ -1,0 +1,90 @@
+/* Hero Section Background */
+.heroSection {
+  position: relative;
+  height: 100vh; /* Full screen */
+  background: url('../public/images/property-1.png') no-repeat center center/cover; /* Replace with your image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Overlay for Darkening Background */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Lower z-index to allow buttons to be clickable */
+}
+
+/* Hero Content Styles */
+.container {
+  position: relative;
+  z-index: 2; /* Ensure buttons and content are above the overlay */
+  pointer-events: auto; /* Allow the container to respond to clicks */
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #f8f9fa;
+}
+
+/* Buttons */
+.serviceButton {
+  margin: 10px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  pointer-events: auto; /* Ensure the buttons are clickable */
+}
+
+/* Button Hover Effects */
+.serviceButton:hover {
+  transform: translateY(-2px) scale(1.05); /* Slight scaling for emphasis */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); /* Brighter and wider shadow */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay effect */
+  color: #fff; /* Ensure the text remains visible */
+}
+
+/* Unique Colors for Each Button on Hover */
+.serviceButton.btn-primary:hover {
+  background-color: #004085; /* Darker shade for primary */
+}
+.serviceButton.btn-secondary:hover {
+  background-color: #545b62; /* Darker shade for secondary */
+}
+.serviceButton.btn-success:hover {
+  background-color: #155724; /* Darker shade for success */
+}
+.serviceButton.btn-warning:hover {
+  background-color: #856404; /* Darker shade for warning */
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .serviceButton {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

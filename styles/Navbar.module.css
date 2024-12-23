@@ -1,0 +1,96 @@
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #2980b9, #6dd5ed); /* Gradient background */
+  padding: 12px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners for the navbar */
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(135deg, #3498db, #9b59b6); /* Lighter gradient on hover */
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand {
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
+  font-size: 2rem;
+  color: #fff; /* Light color for the brand name */
+  font-weight: 700; /* Bold font weight */
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px; /* Slight letter-spacing for clarity */
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #f39c12; /* Hover color for the brand */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ecf0f1; /* Light color for the links */
+  font-family: 'Poppins', sans-serif; /* Stylish and clean font for links */
+  font-size: 1.1rem;
+  margin-right: 20px;
+  padding: 10px 16px;
+  border-radius: 6px; /* Rounded corners for links */
+  letter-spacing: 0.5px; /* Slight letter-spacing for readability */
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: #2980b9; /* Light blue background on hover */
+  font-weight: bold;
+  transform: scale(1.05); /* Slight zoom effect */
+  letter-spacing: 1px; /* Increase letter-spacing on hover for emphasis */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border-color: #f39c12; /* Golden color for the toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #f39c12; /* Golden icon color */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
+/* Optional: Customizing active link for better UX */
+.navbar-nav .nav-item .nav-link.active {
+  color: #f39c12;
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12; /* Adds a small underline to active link */
+}
+
+/* Adding Smooth Text Animation to Links */
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-item .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f39c12; /* Golden underline */
+  left: -100%;
+  bottom: 0;
+  transition: left 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover:before {
+  left: 0; /* Slide in underline effect on hover */
+}

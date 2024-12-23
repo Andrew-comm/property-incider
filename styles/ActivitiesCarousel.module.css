@@ -1,0 +1,55 @@
+/* Activities Section */
+.activitiesSection {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .activitiesTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 30px;
+  }
+  
+  /* Carousel */
+  .carousel-item img {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carouselCaption {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .carousel-indicators button {
+    background-color: #343a40;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #007bff;
+  }
+  
+  /* Buttons */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .activitiesTitle {
+      font-size: 2rem;
+    }
+  
+    .carouselCaption h5 {
+      font-size: 1.25rem;
+    }
+  
+    .carouselCaption p {
+      font-size: 1rem;
+    }
+  }
+  

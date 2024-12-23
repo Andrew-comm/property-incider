@@ -1,0 +1,105 @@
+/* Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.footer h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffc107;
+  text-align: center; /* Center the title */
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0 0 10px;
+  text-align: center; /* Center the paragraph text */
+}
+
+.footer .link {
+  color: #ffc107;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.footer .link:hover {
+  text-decoration: underline;
+}
+
+.footer .icon {
+  color: #ffc107;
+  margin-right: 8px;
+}
+
+.footer .divider {
+  border-top: 1px solid #495057;
+  margin: 20px 0;
+}
+
+/* Copyright Section */
+.footer .copyright {
+  font-size: 14px;
+  margin: 0;
+  text-align: center; /* Ensure this is centered */
+}
+
+@media (max-width: 768px) {
+  .footer h5 {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+/* Back to Top Button */
+.backToTop {
+  position: fixed;
+  bottom: 100px;  /* Adjusted position to accommodate WhatsApp icon */
+  right: 20px;
+  margin-bottom: 30px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 45%;
+  font-size: 24px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.backToTop:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* WhatsApp Button */
+.whatsappButton {
+  position: fixed;
+  bottom: 50px;  /* Adjusted position below the back-to-top button */
+  right: 20px;
+  background-color: #25d366;  /* WhatsApp green */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.whatsappButton span {
+  margin-left: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.whatsappButton:hover {
+  background-color: #128c7e; /* Darker green on hover */
+}
