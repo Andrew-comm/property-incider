@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link'; // Import Link to add links to carousel items
 import styles from '../styles/ActivitiesCarousel.module.css';
 
 const ActivitiesCarousel = () => {
